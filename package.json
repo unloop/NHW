@@ -1,0 +1,20 @@
+{
+  "name": "hello-world",
+  "version": "0.1.0",
+  "repository": "git@github.com:lastbackend/hello-world.git",
+  "description": "Node DEMO for lastbackend.com",
+  "author": "Last.Backend:TEAM",
+  "license": "lastbackend.com",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified yet\" && exit 0",
+    "start": "node src/app.js"
+  },
+  "engines": {
+    "node": "v0.10.x"
+  },
+  "dependencies": {
+    "express"         : "*",
+    "redis"           : "*"
+  }
+}
