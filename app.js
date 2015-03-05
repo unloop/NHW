@@ -2,6 +2,9 @@ var express = require('express');
 
 (function () {
   'use strict';
+  
+  console.log ('start app');
+  
   var app = express();
 
   app.get('/', function (req, res) {
