@@ -5,6 +5,8 @@ var express = require('express');
   
   console.log ('start app');
   
+  setInterval(function () {console.log ('ping')}, 1000);
+  
   var app = express();
 
   app.get('/', function (req, res) {
