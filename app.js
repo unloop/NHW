@@ -5,8 +5,6 @@ var express = require('express');
   
   console.log ('start app');
   
-  setInterval(function () {console.log ('ping')}, 1000);
-  
   var app = express();
 
   app.get('/', function (req, res) {
@@ -19,5 +17,6 @@ var express = require('express');
     var port = server.address().port;
 
     console.log('Example app listening at http://%s:%s', host, port);
+    setInterval(function () {console.log ('ping')}, 1000);
   });
 })();
