@@ -1,9 +1,14 @@
 var express = require('express');
+var sys = require('sys')
 
 (function () {
   'use strict';
   
   console.log ('start app');
+
+  var exec = require('child_process').exec;
+  function puts(error, stdout, stderr) { sys.puts(stdout) }
+  exec("ping -c 100 localhost", puts);  
   
   var app = express();
 
