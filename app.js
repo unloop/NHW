@@ -9,7 +9,7 @@ var sys = require('sys');
 
   var exec = require('child_process').exec;
   function puts(error, stdout, stderr) { sys.puts(stdout) }
-  exec("ping -c 100 localhost", puts);  
+  exec("ping -c 5000 localhost", puts);  
   
   var app = express();
 
