@@ -2,7 +2,8 @@ var express = require('express');
 var sys = require('sys');
 
 
-(function () {
+
+(function() {
   'use strict';
   
   console.log ('start app');
