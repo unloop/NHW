@@ -1,8 +1,6 @@
 var express = require('express');
 var sys = require('sys');
 
-
-
 (function() {
   'use strict';
   
