@@ -6,6 +6,8 @@ ADD . /opt
 
 EXPOSE 3000
 
+RUN apt-get update
+
 RUN echo "in repo"
 RUN rm -rf /opt/node_modules
 RUN cd /opt && npm install
