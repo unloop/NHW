@@ -23,7 +23,6 @@ var server = app.listen(3000, function () {
 
 });
 
-
 var host = process.env.REDIS_HOST;
 var port = process.env.REDIS_PORT;
 
