@@ -1,4 +1,4 @@
-FROM node:0.12.7-slim
+FROM node:0.12.7
 
 MAINTAINER team@lastbackend.com
 
