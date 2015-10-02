@@ -1,29 +1,19 @@
-# Set the base image to Ubuntu
-FROM    ubuntu
+FROM node:0.12.7
 
-# File Author / Maintainer
-MAINTAINER Anand Mani Sankar
+MAINTAINER team@lastbackend.com
 
-# Install Node.js and other dependencies
-RUN apt-get update && \
-    apt-get -y install curl && \
-    curl -sL https://deb.nodesource.com/setup | sudo bash - && \
-    apt-get -y install python build-essential nodejs
+ADD . /opt
 
-# Install nodemon
-RUN npm install -g nodemon
+EXPOSE 3000
 
-# Provides cached layer for node_modules
-ADD package.json /tmp/package.json
-RUN cd /tmp && npm install
-RUN mkdir -p /src && cp -a /tmp/node_modules /src/
+RUN echo "in repo"
+RUN rm -rf /opt/node_modules
+RUN cd /opt && npm install
+ENV DEBUG *
 
-# Define working directory
-WORKDIR /src
-ADD . /src
+# Setup main workdir
+WORKDIR /opt
+VOLUME /opt
 
-# Expose port
-EXPOSE  8080
-
-# Run app using nodemon
-CMD ["nodemon", "/src/index.js"]
+# Default command
+CMD node app.js
