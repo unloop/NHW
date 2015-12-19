@@ -5,6 +5,7 @@ MAINTAINER team@lastbackend.com
 ADD . /opt
 
 EXPOSE 3000
+EXPOSE 3003
 
 RUN echo "in repo"
 RUN rm -rf /opt/node_modules
