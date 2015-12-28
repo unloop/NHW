@@ -27,4 +27,3 @@ var host = process.env.REDIS_HOST;
 var port = process.env.REDIS_PORT;
 
 console.log('connect to client: ', host, ":", port );
-
