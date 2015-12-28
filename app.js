@@ -11,7 +11,6 @@ app.get('/', function (req, res) {
   client.set('foo',i);
 });
 
-
 console.log('Hello world: Demo test');
 
 
