@@ -1,0 +1,14 @@
+workspace:
+  path: /data
+ 
+registry:
+  - name: node
+    settings:
+      auto_tag: true
+      dockerfile: ./Dockerfile
+      context: .
+    when:
+      branch:
+        - master
+      event:
+        - push
